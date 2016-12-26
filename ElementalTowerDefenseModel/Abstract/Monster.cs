@@ -10,7 +10,7 @@ namespace ElementalTowerDefenseModel
     {
         public AttackComp AttackComp;
         public MovementComp MovementComp;
-        public PriceComp PriceComp { get; private set; }
+        public Stat Price { get; private set; }
 
         public Monster(
             float maxHealth, 
@@ -25,7 +25,8 @@ namespace ElementalTowerDefenseModel
 
             MovementComp = new MovementComp(Math.Abs(movementSpeed));
 
-            PriceComp = new PriceComp(Math.Abs(price));
+            Price = new Stat(
+                Math.Abs(price));
         }
     }
 }
