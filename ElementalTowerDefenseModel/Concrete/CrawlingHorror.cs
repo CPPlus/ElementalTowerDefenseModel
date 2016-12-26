@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElementalTowerDefenseModel.Concrete
+namespace ElementalTowerDefenseModel
 {
     public class CrawlingHorror : Monster
     {
