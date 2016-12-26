@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementalTowerDefenseModel
 {
-    class WaveData
+    public class WaveData
     {
         private Dictionary<Type, int> monsterSequencesData;
         public int Count {

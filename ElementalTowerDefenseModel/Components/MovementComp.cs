@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementalTowerDefenseModel
 {
-    class MovementComp
+    public class MovementComp
     {
         public Stat Speed { get; private set; }
 

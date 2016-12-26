@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Abstract\Tower.cs" />
     <Compile Include="Components\AttackComp.cs" />
+    <Compile Include="Concrete\CrawlingHorror.cs" />
+    <Compile Include="Concrete\EarthTower.cs" />
+    <Compile Include="Concrete\Rock.cs" />
     <Compile Include="Utility\GoldManager.cs" />
     <Compile Include="Components\HealthComp.cs" />
     <Compile Include="Abstract\LivingEntity.cs" />
@@ -55,10 +58,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\Stat.cs" />
     <Compile Include="Utility\WaveData.cs" />
+    <Compile Include="Utility\Wave.cs" />
+    <Compile Include="WaveService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

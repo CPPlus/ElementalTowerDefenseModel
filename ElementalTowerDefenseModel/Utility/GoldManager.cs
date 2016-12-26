@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementalTowerDefenseModel
 {
-    class GoldManager
+    public class GoldManager
     {
         public float Gold { get; private set; }
 

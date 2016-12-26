@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Components">
+    <Position X="2.383" Y="0.5" Height="0.291" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Abstract">
+    <Position X="6.2" Y="0.5" Height="0.291" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Utility">
+    <Position X="2.709" Y="6.5" Height="0.291" Width="1.27" />
+  </Comment>
+  <Comment CommentText="Service">
+    <Position X="6.688" Y="6.472" Height="0.291" Width="1.7" />
+  </Comment>
+  <Class Name="ElementalTowerDefenseModel.LivingEntity">
+    <Position X="6.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAgAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Abstract\LivingEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.Monster">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Abstract\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.Projectile">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Abstract\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.Tower">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAACQAADAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Abstract\Tower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.AttackComp" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAIAAAAABAAAAAAAAABA=</HashCode>
+      <FileName>Components\AttackComp.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.325" Collapsed="true" />
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.HealthComp">
+    <Position X="4.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\HealthComp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.MovementComp">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\MovementComp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.Program">
+    <Position X="2.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.GoldManager">
+    <Position X="4.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAIAE=</HashCode>
+      <FileName>Utility\GoldManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.Stat">
+    <Position X="2.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABIAAAAAAAAgAQAAAIAAACAABAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\Stat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.WaveData">
+    <Position X="4.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAEBAA=</HashCode>
+      <FileName>Utility\WaveData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.WaveService">
+    <Position X="6.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>WaveService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementalTowerDefenseModel.Wave">
+    <Position X="2.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAAAAAAEAAAAAAAAAAEAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\Wave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

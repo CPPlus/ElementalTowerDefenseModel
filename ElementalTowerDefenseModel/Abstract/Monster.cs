@@ -6,27 +6,26 @@ using System.Threading.Tasks;
 
 namespace ElementalTowerDefenseModel
 {
-    abstract class Monster : LivingEntity
+    public abstract class Monster : LivingEntity
     {
         public AttackComp AttackComp;
         public MovementComp MovementComp;
-        public Stat Price { get; private set; }
+        public Stat KillReward { get; private set; }
 
         public Monster(
             float maxHealth, 
             float attackPower, 
-            float attackSpeed,
             float movementSpeed,
-            float price) : base(Math.Abs(maxHealth))
+            float killReward) : base(Math.Abs(maxHealth))
         {
             AttackComp = new AttackComp(
                 Math.Abs(attackPower), 
-                Math.Abs(attackSpeed));
+                0);
 
             MovementComp = new MovementComp(Math.Abs(movementSpeed));
 
-            Price = new Stat(
-                Math.Abs(price));
+            KillReward = new Stat(
+                Math.Abs(killReward));
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementalTowerDefenseModel
 {
-    class AttackComp : ICloneable
+    public class AttackComp : ICloneable
     {
         public Stat Power { get; private set; }
         public Stat Speed { get; private set; }

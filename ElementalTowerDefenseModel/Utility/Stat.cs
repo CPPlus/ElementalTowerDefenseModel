@@ -6,10 +6,16 @@ using System.Threading.Tasks;
  
 namespace ElementalTowerDefenseModel
 {
-    class Stat
+    public class Stat
     {
         public float Points { get; private set; }
         public float MaxPoints { get; private set; }
+        public bool IsEmpty {
+            get
+            {
+                return Points == 0;
+            }
+        }
 
         public Stat(float maxPoints, float points)
         {
@@ -55,11 +61,6 @@ namespace ElementalTowerDefenseModel
         {
             Points -= points;
             LockPoints();
-        }
-
-        public bool IsEmpty()
-        {
-            return Points == 0;
         }
 
         public bool HasPoints(float points)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementalTowerDefenseModel
 {
-    abstract class Tower
+    public abstract class Tower
     {
         public Projectile Projectile;
         public Stat Ammo;

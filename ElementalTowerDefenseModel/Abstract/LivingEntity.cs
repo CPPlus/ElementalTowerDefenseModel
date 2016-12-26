@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementalTowerDefenseModel
 {
-    abstract class LivingEntity
+    public abstract class LivingEntity
     {
         public HealthComp HealthComp;
 
