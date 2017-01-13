@@ -104,5 +104,12 @@
       <FileName>Utility\Wave.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ElementalTowerDefenseModel.TowerService">
+    <Position X="8.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAAAAAAAAAAQAAAACAAAAAAAAAACAAAAAAAAgA=</HashCode>
+      <FileName>TowerService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

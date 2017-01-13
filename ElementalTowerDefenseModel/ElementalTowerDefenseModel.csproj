@@ -47,7 +47,10 @@
     <Compile Include="Components\AttackComp.cs" />
     <Compile Include="Concrete\CrawlingHorror.cs" />
     <Compile Include="Concrete\EarthTower.cs" />
+    <Compile Include="Concrete\Fireball.cs" />
+    <Compile Include="Concrete\FireTower.cs" />
     <Compile Include="Concrete\Rock.cs" />
+    <Compile Include="TowerService.cs" />
     <Compile Include="Utility\GoldManager.cs" />
     <Compile Include="Components\HealthComp.cs" />
     <Compile Include="Abstract\LivingEntity.cs" />
@@ -57,6 +60,7 @@
     <Compile Include="Abstract\Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\Stat.cs" />
+    <Compile Include="Utility\TowerType.cs" />
     <Compile Include="Utility\WaveData.cs" />
     <Compile Include="Utility\Wave.cs" />
     <Compile Include="WaveService.cs" />

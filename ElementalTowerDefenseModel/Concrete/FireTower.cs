@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ElementalTowerDefenseModel
 {
-    public class EarthTower : Tower
+    class FireTower : Tower
     {
-        public EarthTower() : base(new Rock(), 100, 2, 7, 75)
+        public FireTower() : base(new Fireball(), 200, 2, 5, 60)
         {
         }
     }
