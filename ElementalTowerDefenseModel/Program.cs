@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// Another test.
+
 namespace ElementalTowerDefenseModel
 {
     class Program
@@ -14,4 +14,3 @@ namespace ElementalTowerDefenseModel
         }
     }
 }
-//aaaaaaaaaaaaaaaaaaaaaaaaa
