@@ -8,12 +8,13 @@ namespace ElementalTowerDefenseModel
 {
     public class WaveData
     {
-        private Dictionary<Type, int> monsterSequencesData;
+        private Dictionary<MonsterType, int> monsterSequencesData;
+
         public int Count {
             get
             {
                 int totalMonsterCount = 0;
-                foreach (KeyValuePair<Type, int> monsterSequenceData in monsterSequencesData)
+                foreach (KeyValuePair<MonsterType, int> monsterSequenceData in monsterSequencesData)
                 {
                     totalMonsterCount += monsterSequenceData.Value;
                 }
@@ -21,12 +22,24 @@ namespace ElementalTowerDefenseModel
             }
         }
 
-        public WaveData()
+        public MonsterType[] MonsterTypes
         {
-            monsterSequencesData = new Dictionary<Type, int>();
+            get
+            {
+                List<MonsterType> monsterTypes = new List<MonsterType>();
+                foreach (KeyValuePair<MonsterType, int> monsterTypeFrequency in monsterSequencesData)
+                    for (int i = 0; i < monsterTypeFrequency.Value; i++)
+                        monsterTypes.Add(monsterTypeFrequency.Key);
+                return monsterTypes.ToArray();
+            }
         }
 
-        public void AddMonsterSequence(Type type, int count)
+        public WaveData()
+        {
+            monsterSequencesData = new Dictionary<MonsterType, int>();
+        }
+
+        public void AddMonsterSequence(MonsterType type, int count)
         {
             if (monsterSequencesData.ContainsKey(type))
             {
@@ -37,7 +50,7 @@ namespace ElementalTowerDefenseModel
             }
         }
 
-        public void AddMonster(Type type)
+        public void AddMonster(MonsterType type)
         {
             AddMonsterSequence(type, 1);
         }

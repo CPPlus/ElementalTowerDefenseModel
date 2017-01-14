@@ -9,7 +9,8 @@ namespace ElementalTowerDefenseModel
     {
         public List<Monster> Monsters { get; private set; }
         public bool IsDead { get; private set; }
-        public WaveData WaveData { get; private set; }
+
+        public Wave() { }
 
         public void Add(Monster monster)
         {

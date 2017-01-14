@@ -70,7 +70,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ElementalTowerDefenseModel.GoldManager">
-    <Position X="4.5" Y="9.25" Width="1.5" />
+    <Position X="4.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAIAE=</HashCode>
       <FileName>Utility\GoldManager.cs</FileName>
@@ -86,21 +86,14 @@
   <Class Name="ElementalTowerDefenseModel.WaveData">
     <Position X="4.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAEBAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAQAAAIAAAAAAAAAAAAEBAA=</HashCode>
       <FileName>Utility\WaveData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ElementalTowerDefenseModel.WaveService">
-    <Position X="6.75" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
-      <FileName>WaveService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ElementalTowerDefenseModel.Wave">
     <Position X="2.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAJAAAAAAEAAAAAAAAAAEAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAJAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Utility\Wave.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -111,5 +104,26 @@
       <FileName>TowerService.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ElementalTowerDefenseModel.WaveService">
+    <Position X="6.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>WaveService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ElementalTowerDefenseModel.TowerType">
+    <Position X="4.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAABAAAAAA=</HashCode>
+      <FileName>Utility\TowerType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ElementalTowerDefenseModel.MonsterType">
+    <Position X="2.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MonsterType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
