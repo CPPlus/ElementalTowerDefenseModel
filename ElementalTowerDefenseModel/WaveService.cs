@@ -22,7 +22,7 @@ namespace ElementalTowerDefenseModel
             {
                 Monster monster = Instantiate(type);
                 if (monster != null)
-                    wave.Add(Instantiate(type));
+                    wave.Add(monster);
             }
             CurrentWave = wave;
             WavesSpawned++;
@@ -37,7 +37,7 @@ namespace ElementalTowerDefenseModel
             {
                 Monster monster = Instantiate(type);
                 if (monster != null)
-                    wave.Add(Instantiate(type));
+                    wave.Add(monster);
             }
             CurrentWave = wave;
             WavesSpawned++;
