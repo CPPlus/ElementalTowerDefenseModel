@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{78DF95EE-2558-4E67-9F96-E3AD6051CA89}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ElementalTowerDefenseModel</RootNamespace>
     <AssemblyName>ElementalTowerDefenseModel</AssemblyName>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,7 +53,8 @@
     <Compile Include="Concrete\Fireball.cs" />
     <Compile Include="Concrete\FireTower.cs" />
     <Compile Include="Concrete\Rock.cs" />
-    <Compile Include="TowerService.cs" />
+    <Compile Include="Services\TowerService.cs" />
+    <Compile Include="Services\WaveService.cs" />
     <Compile Include="Utility\GoldManager.cs" />
     <Compile Include="Components\HealthComp.cs" />
     <Compile Include="Abstract\LivingEntity.cs" />
@@ -64,7 +68,6 @@
     <Compile Include="Utility\TowerType.cs" />
     <Compile Include="Utility\WaveData.cs" />
     <Compile Include="Utility\Wave.cs" />
-    <Compile Include="WaveService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

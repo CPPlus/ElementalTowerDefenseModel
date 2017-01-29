@@ -2,49 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace ElementalTowerDefenseModel
+namespace ElementalTowerDefenseModel.Services
 {
-    public class TowerService
+    class TowerService
     {
         private GoldManager goldManager;
         private List<Tower> towers;
+        private float sellPriceDrop;
 
-        public Tower Buy(TowerType type)
+        public TowerService(GoldManager goldManager, float sellPriceDrop)
         {
-            Tower tower = null;
+            this.goldManager = goldManager;
+            towers = new List<Tower>();
 
-            switch (type)
-            {
-                case TowerType.EARTH_TOWER: tower = new EarthTower(); break;
-                case TowerType.FIRE_TOWER: tower = new FireTower(); break;
-            }
-
-            return TryToBuyTower(tower);
+            sellPriceDrop = Math.Abs(sellPriceDrop);
+            if (sellPriceDrop < 0) sellPriceDrop = 0;
+            if (sellPriceDrop > 1) sellPriceDrop = 1;
         }
 
-        private Tower TryToBuyTower(Tower tower)
+        // TODO: Instantiate actual tower.
+        public Tower Buy(Type type)
         {
-            if (tower == null) return null;
+            // Instantiate a tower depending on type.
+            Tower tower = null;
 
             if (goldManager.CanSpend(tower.Price.Points))
             {
-                goldManager.Spend(tower.Price.Points);
                 towers.Add(tower);
+                goldManager.Spend(tower.Price.Points);
                 return tower;
+            } else
+            {
+                return null;
             }
-            else return null;
         }
 
         public void Sell(Tower tower)
         {
-            if (tower == null) return;
-
-            if (towers.Contains(tower))
-            {
-                towers.Remove(tower);
-                goldManager.Earn(tower.Price.Points);
-            }
+            towers.Remove(tower);
+            goldManager.Earn(tower.Price.Points * sellPriceDrop);
         }
 
         public void Reload()
@@ -53,6 +51,19 @@ namespace ElementalTowerDefenseModel
             {
                 tower.Ammo.Fill();
             }
+        }
+
+        public void Reload(float ammo)
+        {
+            foreach (Tower tower in towers)
+            {
+                tower.Ammo.Fill(ammo);
+            }
+        }
+
+        public void Clear()
+        {
+            towers.Clear();
         }
     }
 }
