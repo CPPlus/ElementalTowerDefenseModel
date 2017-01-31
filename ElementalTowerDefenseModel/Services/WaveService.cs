@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +22,7 @@ namespace ElementalTowerDefenseModel
             {
                 Monster monster = Instantiate(type);
                 if (monster != null)
-                    wave.Add(monster);
+                    wave.Add(Instantiate(type));
             }
             CurrentWave = wave;
             WavesSpawned++;
@@ -37,7 +37,7 @@ namespace ElementalTowerDefenseModel
             {
                 Monster monster = Instantiate(type);
                 if (monster != null)
-                    wave.Add(monster);
+                    wave.Add(Instantiate(type));
             }
             CurrentWave = wave;
             WavesSpawned++;
@@ -47,7 +47,7 @@ namespace ElementalTowerDefenseModel
         private Monster Instantiate(MonsterType type)
         {
             Monster monster = null;
-            switch (type)
+            switch(type)
             {
                 case MonsterType.CRAWLING_HORROR: monster = new CrawlingHorror(); break;
             }
