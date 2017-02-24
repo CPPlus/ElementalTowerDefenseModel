@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementalTowerDefenseModel", "ElementalTowerDefenseModel\ElementalTowerDefenseModel.csproj", "{78DF95EE-2558-4E67-9F96-E3AD6051CA89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{291B9F8D-2FD4-4C0C-AD4B-30CD085AB490}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{78DF95EE-2558-4E67-9F96-E3AD6051CA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78DF95EE-2558-4E67-9F96-E3AD6051CA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78DF95EE-2558-4E67-9F96-E3AD6051CA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291B9F8D-2FD4-4C0C-AD4B-30CD085AB490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291B9F8D-2FD4-4C0C-AD4B-30CD085AB490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291B9F8D-2FD4-4C0C-AD4B-30CD085AB490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291B9F8D-2FD4-4C0C-AD4B-30CD085AB490}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
