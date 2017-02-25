@@ -7,6 +7,7 @@ namespace ElementalTowerDefenseModel
 {
     public enum MonsterType
     {
-        CRAWLING_HORROR
+        CRAWLING_HORROR,
+        RUNNER
     }
 }

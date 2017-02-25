@@ -53,7 +53,9 @@
     <Compile Include="Concrete\EarthTower.cs" />
     <Compile Include="Concrete\Fireball.cs" />
     <Compile Include="Concrete\FireTower.cs" />
+    <Compile Include="Concrete\LevelOneWavesData.cs" />
     <Compile Include="Concrete\Rock.cs" />
+    <Compile Include="Concrete\Runner.cs" />
     <Compile Include="Services\TowerService.cs" />
     <Compile Include="Services\WaveService.cs" />
     <Compile Include="Utility\GoldManager.cs" />
@@ -69,12 +71,16 @@
     <Compile Include="Utility\TowerType.cs" />
     <Compile Include="Utility\WaveData.cs" />
     <Compile Include="Utility\Wave.cs" />
+    <Compile Include="Utility\WavesData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "C:\Users\Grigorov\Documents\User Created\Elemental Tower Defense\ElementalTowerDefenseModel\ElementalTowerDefenseModel\bin\Debug\ElementalTowerDefenseModel.dll" "C:\Users\Grigorov\Documents\The Valley Of The Fireflies\Assets\Scripts"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

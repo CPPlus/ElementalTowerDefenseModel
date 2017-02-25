@@ -12,7 +12,7 @@ namespace ElementalTowerDefenseModel
         public Stat KillReward { get; private set; }
 
         public Monster(
-            float maxHealth, 
+            float maxHealth,
             float attackPower, 
             float movementSpeed,
             float killReward) : base(Math.Abs(maxHealth))

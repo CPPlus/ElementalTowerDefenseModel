@@ -8,12 +8,24 @@ namespace ElementalTowerDefenseModel
     public class Wave
     {
         public List<Monster> Monsters { get; private set; }
-        public bool IsDead { get; private set; }
+        public bool IsDead
+        {
+            get
+            {
+                bool result = true;
+                foreach (Monster monster in Monsters)
+                    if (!monster.HealthComp.IsDead)
+                        result = false;
+                return result;
+            }
+        }
 
         public Wave() { }
 
         public void Add(Monster monster)
         {
+            if (Monsters == null) Monsters = new List<Monster>();
+
             Monsters.Add(monster);
         }
 

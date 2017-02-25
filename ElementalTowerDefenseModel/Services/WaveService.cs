@@ -50,6 +50,7 @@ namespace ElementalTowerDefenseModel
             switch(type)
             {
                 case MonsterType.CRAWLING_HORROR: monster = new CrawlingHorror(); break;
+                case MonsterType.RUNNER: monster = new Runner(); break;
             }
             return monster;
         }
