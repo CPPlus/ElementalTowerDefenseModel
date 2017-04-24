@@ -32,11 +32,21 @@ namespace ElementalTowerDefenseModel
             // Third wave.
             waveData = new WaveData();
             waveData.AddMonsterSequence(MonsterType.CRAWLING_HORROR, 5);
+            waveData.AddMonsterSequence(MonsterType.AIR_HORROR, 3);
             data.Add(waveData);
 
             // Fourth wave.
             waveData = new WaveData();
             waveData.AddMonsterSequence(MonsterType.RUNNER, 3);
+            waveData.AddMonsterSequence(MonsterType.AIR_HORROR, 1);
+            data.Add(waveData);
+
+            // Fifth wave.
+            waveData = new WaveData();
+            waveData.AddMonsterSequence(MonsterType.RUNNER, 2);
+            waveData.AddMonsterSequence(MonsterType.CRAWLING_HORROR, 3);
+            waveData.AddMonsterSequence(MonsterType.AIR_HORROR, 2);
+            waveData.AddMonsterSequence(MonsterType.SOUL_EATER, 1);
             data.Add(waveData);
 
             Data = data.ToArray();

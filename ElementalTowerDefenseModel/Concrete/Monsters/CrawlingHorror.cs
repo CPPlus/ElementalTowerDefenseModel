@@ -5,9 +5,9 @@ using System.Text;
 
 namespace ElementalTowerDefenseModel
 {
-    public class Runner : Monster
+    public class CrawlingHorror : Monster
     {
-        public Runner() : base(25, 9, 2.5f, 17)
+        public CrawlingHorror() : base(35, 15, 1.25f, MonsterType.CRAWLING_HORROR, TerrainType.GROUND)
         {
         }
     }

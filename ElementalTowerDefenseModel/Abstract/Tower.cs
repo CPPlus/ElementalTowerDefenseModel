@@ -5,31 +5,31 @@ using System.Text;
 
 namespace ElementalTowerDefenseModel
 {
-    public abstract class Tower
+    public abstract class Tower : IModel
     {
+        public TowerType Type { get; private set; }
         public Projectile Projectile;
         public Stat Ammo;
-        public Stat ShotCost;
         public Stat Range;
-        public Stat Price;
+        public Stat BaseAttackSpeed;
+        public float AttackSpeed { get { return BaseAttackSpeed.Points + Projectile.AttackComp.Speed.Points; } }
 
-        public Tower(Projectile projectile, float ammo, float shotCost, float range, float price)
+        public Tower(Projectile projectile, float ammo, float range, float baseAttackSpeed, TowerType type)
         {
             Ammo = new Stat(Math.Abs(ammo));
-            ShotCost = new Stat(shotCost);
             Range = new Stat(Math.Abs(range));
-            Price = new Stat(Math.Abs(price));
+            Projectile = projectile;
+            BaseAttackSpeed = new Stat(Math.Abs(baseAttackSpeed));
+            Type = type;
         }
 
         public Projectile Shoot(Monster monster)
         {
-            if (Ammo.HasPoints(ShotCost.Points))
+            if (Ammo.HasPoints(Projectile.ShotCost.Points))
             {
-                Ammo.Empty(ShotCost.Points);
+                Ammo.Empty(Projectile.ShotCost.Points);
 
-                Projectile projectile = null;
-                projectile.Clone(Projectile);
-                
+                Projectile projectile = Projectile.Clone();
                 monster.GetBeingShot(projectile);
                 return projectile;
             }

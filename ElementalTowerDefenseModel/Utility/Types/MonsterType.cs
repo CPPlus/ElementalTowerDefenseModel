@@ -8,6 +8,9 @@ namespace ElementalTowerDefenseModel
     public enum MonsterType
     {
         CRAWLING_HORROR,
-        RUNNER
+        RUNNER,
+        SOUL_EATER,
+        AIR_HORROR,
+        NONE
     }
 }

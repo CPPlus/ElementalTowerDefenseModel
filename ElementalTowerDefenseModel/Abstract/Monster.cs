@@ -7,15 +7,17 @@ namespace ElementalTowerDefenseModel
 {
     public abstract class Monster : LivingEntity
     {
+        public MonsterType Type { get; private set; }
+        public TerrainType Terrain { get; private set; }
         public AttackComp AttackComp;
         public MovementComp MovementComp;
-        public Stat KillReward { get; private set; }
 
         public Monster(
             float maxHealth,
             float attackPower, 
             float movementSpeed,
-            float killReward) : base(Math.Abs(maxHealth))
+            MonsterType type,
+            TerrainType terrain) : base(Math.Abs(maxHealth))
         {
             AttackComp = new AttackComp(
                 Math.Abs(attackPower), 
@@ -23,8 +25,8 @@ namespace ElementalTowerDefenseModel
 
             MovementComp = new MovementComp(Math.Abs(movementSpeed));
 
-            KillReward = new Stat(
-                Math.Abs(killReward));
+            Type = type;
+            Terrain = terrain;
         }
     }
 }

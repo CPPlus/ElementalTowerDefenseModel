@@ -13,7 +13,9 @@ namespace Test
 
         static void Main(string[] args)
         {
-            
+            Tower tower = new EarthTower();
+            Monster monster = new CrawlingHorror();
+            Projectile projectile = tower.Shoot(monster);
         }
 
         static void PrintVitalInfo(LivingEntity entity)

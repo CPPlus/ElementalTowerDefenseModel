@@ -7,6 +7,7 @@ namespace ElementalTowerDefenseModel
 {
     public class Stat
     {
+        public float InitialMaxPoints { get; private set; }
         public float Points { get; private set; }
         public float MaxPoints { get; private set; }
         public bool IsEmpty {
@@ -16,14 +17,26 @@ namespace ElementalTowerDefenseModel
             }
         }
 
+        public bool IsFull
+        {
+            get { return Points == MaxPoints; }
+        }
+        
         public Stat(float maxPoints, float points)
         {
             MaxPoints = Math.Abs(maxPoints);
+            InitialMaxPoints = MaxPoints;
             Points = Math.Abs(points);
             LockPoints();
         }
 
         public Stat(float points) : this(points, points) {}
+
+        public void Reset()
+        {
+            MaxPoints = InitialMaxPoints;
+            LockPoints();
+        }
 
         public void Buff(float points)
         {
@@ -69,10 +82,10 @@ namespace ElementalTowerDefenseModel
 
         private void LockPoints()
         {
+            if (MaxPoints < 0) MaxPoints = 0;
+
             if (Points > MaxPoints) Points = MaxPoints;
             else if (Points < 0) Points = 0;
-
-            if (MaxPoints < 0) MaxPoints = 0;
         }
     }
 }

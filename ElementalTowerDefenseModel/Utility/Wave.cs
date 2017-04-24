@@ -29,6 +29,11 @@ namespace ElementalTowerDefenseModel
             Monsters.Add(monster);
         }
 
+        public bool Remove(Monster monster)
+        {
+            return Monsters.Remove(monster);
+        }
+
         public void Kill()
         {
             foreach (Monster monster in Monsters)

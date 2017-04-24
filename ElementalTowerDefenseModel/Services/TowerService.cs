@@ -7,19 +7,23 @@ namespace ElementalTowerDefenseModel
 {
     public class TowerService
     {
+        private const float TOWER_REFUND_AMOUNT = 0.5f;
+        private const float PER_RELOAD_PRICE = 10;
+
         private GoldManager goldManager;
         private List<Tower> towers;
+        private TowerSelector towerSelector;
 
-        public Tower Buy(TowerType type)
+        public TowerService(GoldManager goldManager, TowerSelector towerSelector)
         {
-            Tower tower = null;
+            this.goldManager = goldManager;
+            towers = new List<Tower>();
+            this.towerSelector = towerSelector;
+        }
 
-            switch (type)
-            {
-                case TowerType.EARTH_TOWER: tower = new EarthTower(); break;
-                case TowerType.FIRE_TOWER: tower = new FireTower(); break;
-            }
-
+        public Tower Buy()
+        {
+            Tower tower = TowerFactory.CreateTower(towerSelector.SelectedTowerType);
             return TryToBuyTower(tower);
         }
 
@@ -27,31 +31,52 @@ namespace ElementalTowerDefenseModel
         {
             if (tower == null) return null;
 
-            if (goldManager.CanSpend(tower.Price.Points))
+            float towerPrice = goldManager.PriceList.GetPrice(tower.Type);
+
+            if (goldManager.CanSpend(towerPrice))
             {
-                goldManager.Spend(tower.Price.Points);
+                goldManager.Spend(towerPrice);
                 towers.Add(tower);
                 return tower;
             }
             else return null;
         }
 
-        public void Sell(Tower tower)
+        public float Sell(Tower tower)
         {
-            if (tower == null) return;
+            if (tower == null) return 0;
 
             if (towers.Contains(tower))
             {
                 towers.Remove(tower);
-                goldManager.Earn(tower.Price.Points);
+                float sellPrice = goldManager.PriceList.GetPrice(tower.Type) * TOWER_REFUND_AMOUNT;
+                goldManager.Earn(sellPrice);
+                return sellPrice;
+            } else return 0;
+        }
+
+        public float Reload(Tower tower)
+        {
+            if (tower == null) return 0;
+
+            if (towers.Contains(tower))
+            {
+                if (goldManager.CanSpend(PER_RELOAD_PRICE) && !tower.Ammo.IsFull)
+                {
+                    tower.Ammo.Fill();
+                    goldManager.Spend(PER_RELOAD_PRICE);
+                    return PER_RELOAD_PRICE;
+                }
             }
+
+            return 0;
         }
 
         public void Reload()
         {
             foreach (Tower tower in towers)
             {
-                tower.Ammo.Fill();
+                Reload(tower);
             }
         }
     }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ElementalTowerDefenseModel
 {
-    public abstract class LivingEntity
+    public abstract class LivingEntity : IModel
     {
         public HealthComp HealthComp;
 
@@ -18,7 +18,6 @@ namespace ElementalTowerDefenseModel
                 {
                     accumulatedDamage += projectile.AttackComp.Power.Points;
                 }
-
                 return accumulatedDamage >= HealthComp.Health.Points;
             }
         }
@@ -38,6 +37,7 @@ namespace ElementalTowerDefenseModel
         public void GetShot(Projectile projectile)
         {
             incomingProjectiles.Remove(projectile);
+            projectile.AttackComp.Attack(this);
         }
     }
 }

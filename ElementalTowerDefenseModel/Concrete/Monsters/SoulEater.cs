@@ -5,9 +5,9 @@ using System.Text;
 
 namespace ElementalTowerDefenseModel
 {
-    class FireTower : Tower
+    public class SoulEater : Monster
     {
-        public FireTower() : base(new Fireball(), 200, 2, 5, 60)
+        public SoulEater() : base(1000, 30, 0.7f, MonsterType.SOUL_EATER, TerrainType.GROUND)
         {
         }
     }

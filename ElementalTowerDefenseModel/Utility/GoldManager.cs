@@ -5,13 +5,15 @@ using System.Text;
 
 namespace ElementalTowerDefenseModel
 {
-    public class GoldManager
+    public class GoldManager : IModel
     {
+        public PriceList PriceList { get; private set; }
         public float Gold { get; private set; }
 
-        public GoldManager(float gold)
+        public GoldManager(float gold, PriceList priceList)
         {
             Gold = gold;
+            PriceList = priceList;
         }
 
         public bool Spend(float gold)

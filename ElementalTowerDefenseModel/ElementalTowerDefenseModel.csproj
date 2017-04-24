@@ -47,30 +47,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\Tower.cs" />
-    <Compile Include="Components\AttackComp.cs" />
-    <Compile Include="Concrete\CrawlingHorror.cs" />
-    <Compile Include="Concrete\EarthTower.cs" />
-    <Compile Include="Concrete\Fireball.cs" />
-    <Compile Include="Concrete\FireTower.cs" />
-    <Compile Include="Concrete\LevelOneWavesData.cs" />
-    <Compile Include="Concrete\Rock.cs" />
-    <Compile Include="Concrete\Runner.cs" />
-    <Compile Include="Services\TowerService.cs" />
-    <Compile Include="Services\WaveService.cs" />
-    <Compile Include="Utility\GoldManager.cs" />
-    <Compile Include="Components\HealthComp.cs" />
+    <Compile Include="Abstract\IModel.cs" />
     <Compile Include="Abstract\LivingEntity.cs" />
     <Compile Include="Abstract\Monster.cs" />
-    <Compile Include="Components\MovementComp.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Abstract\PriceList.cs" />
     <Compile Include="Abstract\Projectile.cs" />
+    <Compile Include="Abstract\Tower.cs" />
+    <Compile Include="Components\AttackComp.cs" />
+    <Compile Include="Components\HealthComp.cs" />
+    <Compile Include="Components\MovementComp.cs" />
+    <Compile Include="Concrete\Monsters\AirHorror.cs" />
+    <Compile Include="Concrete\Monsters\CrawlingHorror.cs" />
+    <Compile Include="Concrete\Monsters\Runner.cs" />
+    <Compile Include="Concrete\Monsters\SoulEater.cs" />
+    <Compile Include="Concrete\Prices\RegularPriceList.cs" />
+    <Compile Include="Concrete\Projectiles\Fireball.cs" />
+    <Compile Include="Concrete\Projectiles\Rock.cs" />
+    <Compile Include="Concrete\Towers\EarthTower.cs" />
+    <Compile Include="Concrete\Towers\FireTower.cs" />
+    <Compile Include="Concrete\Waves\LevelOneWavesData.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility\MonsterType.cs" />
+    <Compile Include="Services\TowerService.cs" />
+    <Compile Include="Services\WaveService.cs" />
+    <Compile Include="Utility\Factories\MonsterFactory.cs" />
+    <Compile Include="Utility\Factories\ProjectileFactory.cs" />
+    <Compile Include="Utility\Factories\TowerFactory.cs" />
+    <Compile Include="Utility\GoldManager.cs" />
     <Compile Include="Utility\Stat.cs" />
-    <Compile Include="Utility\TowerType.cs" />
-    <Compile Include="Utility\WaveData.cs" />
+    <Compile Include="Utility\TowerSelector.cs" />
+    <Compile Include="Utility\Types\MonsterType.cs" />
+    <Compile Include="Utility\Types\ProjectileType.cs" />
+    <Compile Include="Utility\Types\TerrainType.cs" />
+    <Compile Include="Utility\Types\TowerType.cs" />
     <Compile Include="Utility\Wave.cs" />
+    <Compile Include="Utility\WaveData.cs" />
     <Compile Include="Utility\WavesData.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,7 +90,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "C:\Users\Grigorov\Documents\User Created\Elemental Tower Defense\ElementalTowerDefenseModel\ElementalTowerDefenseModel\bin\Debug\ElementalTowerDefenseModel.dll" "C:\Users\Grigorov\Documents\The Valley Of The Fireflies\Assets\Scripts"</PostBuildEvent>
+    <PostBuildEvent>copy "C:\Users\Grigorov\Documents\User Created\Elemental Tower Defense\ElementalTowerDefenseModel\ElementalTowerDefenseModel\bin\Debug\ElementalTowerDefenseModel.dll" "C:\Users\Grigorov\Documents\User Created\Elemental Tower Defense\The Valley Of The Fireflies\Assets\Scripts"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

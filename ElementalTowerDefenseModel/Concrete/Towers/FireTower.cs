@@ -5,9 +5,9 @@ using System.Text;
 
 namespace ElementalTowerDefenseModel
 {
-    class Fireball : Projectile
+    public class FireTower : Tower
     {
-        public Fireball() : base(6, 2.5f)
+        public FireTower() : base(new Fireball(), 300, 2.5f, 0.1f, TowerType.FIRE_TOWER)
         {
         }
     }

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace ElementalTowerDefenseModel
 {
-    public class Rock : Projectile
+    public class Fireball : Projectile
     {
-        public Rock() : base(10, 1)
+        public Fireball() : base(6, 1, 10, ProjectileType.FIREBALL)
         {
         }
     }

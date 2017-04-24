@@ -10,9 +10,13 @@ namespace ElementalTowerDefenseModel
         public int WavesSpawned { get; private set; }
         public Wave CurrentWave { get; private set; }
 
-        public WaveService()
+        private GoldManager goldManager;
+        private List<Monster> collectedRewards = new List<Monster>();
+
+        public WaveService(GoldManager goldManager)
         {
             WavesSpawned = 0;
+            this.goldManager = goldManager;
         }
 
         public Wave Spawn(MonsterType type, int count)
@@ -20,9 +24,9 @@ namespace ElementalTowerDefenseModel
             Wave wave = new Wave();
             for (int i = 0; i < count; i++)
             {
-                Monster monster = Instantiate(type);
+                Monster monster = MonsterFactory.CreateMonster(type);
                 if (monster != null)
-                    wave.Add(Instantiate(type));
+                    wave.Add(monster);
             }
             CurrentWave = wave;
             WavesSpawned++;
@@ -35,24 +39,30 @@ namespace ElementalTowerDefenseModel
             MonsterType[] monsterTypes = data.MonsterTypes;
             foreach (MonsterType type in monsterTypes)
             {
-                Monster monster = Instantiate(type);
+                Monster monster = MonsterFactory.CreateMonster(type);
                 if (monster != null)
-                    wave.Add(Instantiate(type));
+                    wave.Add(monster);
             }
             CurrentWave = wave;
             WavesSpawned++;
             return wave;
         }
 
-        private Monster Instantiate(MonsterType type)
+        public void CollectKillRewards()
         {
-            Monster monster = null;
-            switch(type)
+            if (CurrentWave == null) return;
+
+            foreach (Monster monster in CurrentWave.Monsters)
             {
-                case MonsterType.CRAWLING_HORROR: monster = new CrawlingHorror(); break;
-                case MonsterType.RUNNER: monster = new Runner(); break;
+                if (monster.HealthComp.IsDead)
+                {
+                    if (!collectedRewards.Contains(monster))
+                    {
+                        collectedRewards.Add(monster);
+                        goldManager.Earn(goldManager.PriceList.GetPrice(monster.Type));
+                    }
+                }
             }
-            return monster;
         }
     }
 }
