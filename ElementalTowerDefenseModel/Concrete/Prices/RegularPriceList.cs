@@ -9,10 +9,10 @@ namespace ElementalTowerDefenseModel
     {
         protected override void AddMonsterPrices(Dictionary<MonsterType, float> monsterPrices)
         {
-            monsterPrices.Add(MonsterType.CRAWLING_HORROR, 50);
-            monsterPrices.Add(MonsterType.RUNNER, 40);
-            monsterPrices.Add(MonsterType.AIR_HORROR, 65);
-            monsterPrices.Add(MonsterType.SOUL_EATER, 500);
+            monsterPrices.Add(MonsterType.CRAWLING_HORROR, 25);
+            monsterPrices.Add(MonsterType.RUNNER, 20);
+            monsterPrices.Add(MonsterType.AIR_HORROR, 30);
+            monsterPrices.Add(MonsterType.SOUL_EATER, 250);
         }
 
         protected override void AddTowerPrices(Dictionary<TowerType, float> towerPrices)

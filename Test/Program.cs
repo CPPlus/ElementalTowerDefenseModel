@@ -16,6 +16,7 @@ namespace Test
             Tower tower = new EarthTower();
             Monster monster = new CrawlingHorror();
             Projectile projectile = tower.Shoot(monster);
+            PrintVitalInfo(monster);
         }
 
         static void PrintVitalInfo(LivingEntity entity)

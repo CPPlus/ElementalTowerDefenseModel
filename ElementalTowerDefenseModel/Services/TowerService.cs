@@ -12,9 +12,9 @@ namespace ElementalTowerDefenseModel
 
         private GoldManager goldManager;
         private List<Tower> towers;
-        private TowerSelector towerSelector;
+        private TowerSpawner towerSelector;
 
-        public TowerService(GoldManager goldManager, TowerSelector towerSelector)
+        public TowerService(GoldManager goldManager, TowerSpawner towerSelector)
         {
             this.goldManager = goldManager;
             towers = new List<Tower>();

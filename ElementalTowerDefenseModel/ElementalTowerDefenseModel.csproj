@@ -75,7 +75,7 @@
     <Compile Include="Utility\Factories\TowerFactory.cs" />
     <Compile Include="Utility\GoldManager.cs" />
     <Compile Include="Utility\Stat.cs" />
-    <Compile Include="Utility\TowerSelector.cs" />
+    <Compile Include="Utility\TowerSpawner.cs" />
     <Compile Include="Utility\Types\MonsterType.cs" />
     <Compile Include="Utility\Types\ProjectileType.cs" />
     <Compile Include="Utility\Types\TerrainType.cs" />
@@ -90,7 +90,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "C:\Users\Grigorov\Documents\User Created\Elemental Tower Defense\ElementalTowerDefenseModel\ElementalTowerDefenseModel\bin\Debug\ElementalTowerDefenseModel.dll" "C:\Users\Grigorov\Documents\User Created\Elemental Tower Defense\The Valley Of The Fireflies\Assets\Scripts"</PostBuildEvent>
+    <PostBuildEvent>copy "C:\Users\Grigorov\Documents\User Created\Elemental Tower Defense\ElementalTowerDefenseModel\ElementalTowerDefenseModel\bin\Debug\ElementalTowerDefenseModel.dll" "C:\Users\Grigorov\Documents\User Created\Elemental Tower Defense\The-Valley-Of-The-Fireflies\Assets\Scripts"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
